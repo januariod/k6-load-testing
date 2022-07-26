@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm install
+      - name: Run ESLint
+        run: npm run lint
+  k6-performance-tests:
+    needs: eslint
+    runs-on: ubuntu-latest
+    container: grafana/k6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run performance tests 🧪
+        uses: grafana/k6-action@v0.2.0
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        with:
+          command: npm test

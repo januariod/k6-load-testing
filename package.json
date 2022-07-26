@@ -1,0 +1,35 @@
+{
+  "name": "k6-performance-testing",
+  "version": "1.0.0",
+  "description": "Performance testing with K6",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "test": "k6 run test/*spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/januariod/k6-performance-testing.git"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "performance",
+    "load",
+    "k6"
+  ],
+  "author": "Daniel Januario",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/januariod/k6-performance-testing/issues"
+  },
+  "homepage": "https://github.com/januariod/k6-performance-testing#readme",
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "husky": "^8.0.1"
+  }
+}
