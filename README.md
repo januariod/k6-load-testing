@@ -1,5 +1,5 @@
-# k6-performance-testing
-Performance testing with K6
+# _K6-Load-Testing_ with K6
+Sample project to demonstrate load/performance tests written with K6 running on a CI service.
 
 ## Test Types
 

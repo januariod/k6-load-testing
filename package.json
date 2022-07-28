@@ -1,7 +1,7 @@
 {
-  "name": "k6-performance-testing",
+  "name": "k6-load-testing",
   "version": "1.0.0",
-  "description": "Performance testing with K6",
+  "description": "Load testing with K6",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -18,8 +18,8 @@
   "keywords": [
     "qa",
     "automation",
-    "performance",
     "load",
+    "performance",
     "k6"
   ],
   "author": "Daniel Januario",
