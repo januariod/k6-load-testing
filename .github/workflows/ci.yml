@@ -25,7 +25,7 @@ jobs:
       - name: Run performance tests 🧪
         uses: grafana/k6-action@v0.2.0
         with:
-          command: npm test
+          filename: test/test.spec.js
           flags: --out json=results.json
 
       - name: Upload performance test results
