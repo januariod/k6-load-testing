@@ -1,4 +1,7 @@
 # _Load-Testing_ with K6
+
+[![ci](https://github.com/januariod/k6-load-testing/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/januariod/k6-load-testing/actions/workflows/ci.yml)
+
 Sample project to demonstrate load/performance tests written with K6 running on a CI service.
 
 ## Test Types
