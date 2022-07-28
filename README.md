@@ -45,7 +45,7 @@ To install K6, follow the steps in the official documentation:
 
 ## Running the tests
 
-In this project, you can run tests only in interactive mode.
+In this project, you can run tests only in headless mode.
 ### Headless mode
 
 Run `npm test` (or `npm t` for short) to run all tests in headless mode.
