@@ -25,11 +25,10 @@ jobs:
       - name: Run performance tests 🧪
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: test/test.spec.js
-          flags: --out json=results.json
+          filename: test/*.spec.js
 
       - name: Upload performance test results
         uses: actions/upload-artifact@v3
         with:
           name: k6-report
-          path: results.json
+          path: summary.html

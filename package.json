@@ -30,6 +30,7 @@
   "homepage": "https://github.com/januariod/k6-performance-testing#readme",
   "devDependencies": {
     "eslint": "^8.20.0",
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "k6": "^0.0.0"
   }
 }
