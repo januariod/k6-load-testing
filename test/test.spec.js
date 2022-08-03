@@ -15,10 +15,13 @@ export const options = {
     { duration: '5s', target: 0 },
   ],
   thresholds: {
-    // http errors should be less than 5%
-    http_req_failed: ['rate < 0.05'],
+    // the rate of successful checks should be higher than 90%
+    checks: ['rate > 0.9'],
 
-    // 90% of requests must finish within 500ms, 95% within 1000, and 99.9% within 2s.
+    // http errors should be less than 5%
+    http_req_failed: ['rate < 0.5'],
+
+    // 90% of requests must finish within 3s, 95% within 6s, and 99.9% within 9s.
     http_req_duration: ['p(90) < 3000', 'p(95) < 6000', 'p(99.9) < 9000'],
   },
 };
@@ -28,11 +31,11 @@ export default function () {
   check(res, {
     'is status 200': (r) => r.status === 200,
 
-    'body size is 9,591 bytes': (r) => r.body.length <= 10000,
+    'body size is less than 10000 bytes': (r) => r.body.length <= 9999,
 
     'verify homepage text': (r) =>
       r.body.includes('date_of_birth'),
 
-    'max duration': (r) => r.timings.duration < 4000,
+    'max duration': (r) => r.timings.duration < 9000,
   });
 }
